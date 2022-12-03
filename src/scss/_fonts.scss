@@ -11,10 +11,16 @@
     }
 }
 
-//Arimo
-//@include font-face(Arimo, Arimo-Regular, 400);
-//@include font-face(Arimo, Arimo-Medium, 500);
-//@include font-face(Arimo, Arimo-SemiBold, 700);
-//@include font-face(Arimo, Arimo-Bold, 700);
-//@include font-face(Arimo, Arimo-ExtraBold, 800);
-//@include font-face(Arimo, Arimo-Black, 800);
+//Open Sans
+@include font-face(OpenSans, OpenSans-Regular, 400);
+@include font-face(OpenSans, OpenSans-SemiBold, 600);
+@include font-face(OpenSans, OpenSans-Bold, 700);
+
+//Old Standard TT
+@include font-face(OldStandardTT, OldStandardTT-Regular, 400);
+@include font-face(OldStandardTT, OldStandardTT-Bold, 700);
+
+//ModernAntiqua
+@include font-face(ModernAntiqua, ModernAntiqua-Regular, 400);
+
+//OpenSans-SemiBold

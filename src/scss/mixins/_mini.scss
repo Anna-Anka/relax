@@ -34,6 +34,16 @@
     background-repeat: no-repeat;
 }
 
+@mixin bottom-line {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background-color: $grey-400;
+    height: 2px;
+}
+
 @mixin image-set($pathToImage) {
   background-image: url("#{$pathToImage}.jpg");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */

@@ -2,7 +2,7 @@
 
 //@include adaptiv-value("padding", 30, 5, 0);
 $maxWidth: 1920;
-$maxWidthContainer: 1200;
+$maxWidthContainer: 1236;
 
 @mixin adaptiv-value($property, $startSize, $minSize, $type) {
     $addSize: $startSize - $minSize;

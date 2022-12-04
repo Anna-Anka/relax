@@ -1,3 +1,112 @@
 .header {
-    
+	color: $white;
+	background-color: $dark-800;
+	@include adaptiv-value('padding-top', 10, 5, 1);
+	@include adaptiv-value('padding-bottom', 10, 5, 1);
+
+	&__navigation {
+		@include flex-all-center;
+
+		@include mq(md) {
+			justify-content: space-between;
+		}
+	}
+
+	&__burger {
+		display: none;
+
+		@include mq(md) {
+			display: flex;
+		}
+	}
+
+	&__logo {
+		display: none;
+
+		@include mq(md) {
+			display: flex;
+			margin-right: 15px;
+		}
+	}
+
+	&__wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba($dark-800, 0.6);
+		opacity: 0;
+		transition: opacity 0.4s;
+
+        &--active {
+            opacity: 1;
+        }
+	}
+}
+
+.menu {
+	@include flex-all-center;
+
+	@include mq(md) {
+		position: absolute;
+		top: -100%;
+		right: 0;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 100%;
+		max-width: 320px;
+		padding: 40px 30px;
+		overflow: hidden;
+		opacity: 0;
+		transition: background-color 0.4s, opacity 0.4s, top 0.4s;
+	}
+
+	&--active {
+		@include mq(md) {
+			top: 0;
+			height: 100vh;
+			overflow: visible;
+			background-color: $dark-800;
+			opacity: 1;
+		}
+	}
+
+	&__items {
+		@include mq(md) {
+			overflow-y: auto;
+		}
+	}
+
+	&__item {
+		@include adaptiv-value('margin-right', 30, 5, 1);
+
+		@include mq(md) {
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+
+		&--edge,
+		&--logo {
+			@include adaptiv-value('margin-right', 50, 10, 1);
+
+			@include mq(md) {
+				margin-right: 0;
+			}
+		}
+
+		&--logo {
+			@include mq(md) {
+				display: none;
+			}
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.burger {
+	@include burger;
 }

@@ -4,12 +4,14 @@ import { enableScroll } from '../templates/enable-scroll';
 export const burger = () => {
     const burger = document?.querySelector('[data-burger]');
     const menu = document?.querySelector('[data-menu]');
-    const menuItems = document?.querySelectorAll('[data-menu-item]');
+    const menuLinks = document?.querySelectorAll('[data-menu-link]');
     const overlay = document?.querySelector('[data-menu-overlay]');
+    const wrapper = document?.querySelector('.header__wrapper')
 
     burger?.addEventListener('click', (e) => {
         burger?.classList.toggle('burger--active');
         menu?.classList.toggle('menu--active');
+        wrapper?.classList.toggle('header__wrapper--active')
 
         if (menu?.classList.contains('menu--active')) {
             burger?.setAttribute('aria-expanded', 'true');
@@ -27,15 +29,17 @@ export const burger = () => {
         burger?.setAttribute('aria-label', 'Открыть меню');
         burger.classList.remove('burger--active');
         menu.classList.remove('menu--active');
+        wrapper?.classList.remove('header__wrapper--active')
         enableScroll();
     });
 
-    menuItems?.forEach(el => {
+    menuLinks?.forEach(el => {
         el.addEventListener('click', () => {
             burger?.setAttribute('aria-expanded', 'false');
             burger?.setAttribute('aria-label', 'Открыть меню');
             burger.classList.remove('burger--active');
             menu.classList.remove('menu--active');
+            wrapper?.classList.remove('header__wrapper--active')
             enableScroll();
         });
     });

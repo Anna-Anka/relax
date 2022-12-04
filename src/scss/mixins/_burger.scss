@@ -2,13 +2,13 @@
 
 @mixin burger {
 	$burger-width: 30px;
-	$burger-height: 30px;
+	$burger-height: 20px;
 	$burger-line-height: 2px;
 
 	position: relative;
 	width: $burger-width;
 	height: $burger-height;
-	color: $black;
+	color: $white;
 
 	&::before,
 	&::after {

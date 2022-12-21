@@ -38,10 +38,12 @@
 		background-color: rgba($dark-800, 0.6);
 		opacity: 0;
 		transition: opacity 0.4s;
+		z-index: -5;
 
-        &--active {
-            opacity: 1;
-        }
+		&--active {
+			opacity: 1;
+			z-index: 0;
+		}
 	}
 }
 

@@ -1,3 +1,113 @@
 .footer {
-    
+	color: $white;
+	background-color: $dark-800;
+	@include adaptiv-value('padding-top', 50, 30, 1);
+	@include adaptiv-value('padding-bottom', 30, 25, 1);
+
+	@include mq(md) {
+		font-size: 14px;
+	}
+
+	&__container {
+		max-width: 1003px;
+	}
+
+	&__top {
+		position: relative;
+		@include adaptiv-value('padding-bottom', 30, 25, 1);
+		display: flex;
+
+		@include mq(lg) {
+			flex-direction: column;
+		}
+
+		&::before {
+			@include bottom-line;
+			opacity: 0.3;
+		}
+	}
+
+	&__address {
+		max-width: 176px;
+		margin-right: 30px;
+
+		@include mq(lg) {
+			max-width: 100%;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+
+		@include mq(md) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr 2fr;
+		gap: 30px;
+		width: 100%;
+
+		@include mq(md) {
+			gap: 20px;
+		}
+
+		@include mq(sm) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	&__items {
+		display: grid;
+		gap: 20px;
+
+		&--menu {
+			grid-template-columns: 1fr 1fr;
+			gap: 20px 30px;
+
+			@include mq(md) {
+				gap: 15px 20px;
+			}
+
+			@include mq(sm) {
+				grid-column: 1/3;
+			}
+		}
+	}
+
+	&__bottom {
+		@include adaptiv-value('padding-top', 25, 15, 1);
+		@include flex-center-sb;
+
+		@include mq(sm) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__subtext {
+		&:not(:last-child) {
+			margin-right: 15px;
+
+			@include mq(sm) {
+				margin-right: 0;
+                margin-bottom: 10px;
+			}
+		}
+	}
+
+	&__logo {
+		margin-right: 15px;
+
+		@include mq(md) {
+			max-width: 36px;
+			height: 57px;
+		}
+
+		@include mq(sm) {
+			order: -1;
+            margin-right: 0;
+            margin-bottom: 10px;
+		}
+	}
 }

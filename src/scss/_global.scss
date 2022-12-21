@@ -37,6 +37,7 @@ body {
 	color: $yellow-600;
 	font-weight: $fw-600;
 	background-color: $dark-800;
+    border-radius: 10px;
 }
 
 .sr-only {
@@ -79,6 +80,7 @@ body {
 .subtitle {
 	font-family: $oldStandardTT;
 	line-height: 1.3;
+    text-transform: uppercase;
 }
 
 .title {

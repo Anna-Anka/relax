@@ -56,7 +56,9 @@
 
 	&__bg {
 		width: 100%;
-		@include adaptiv-value('height', 500, 300, 1);
+		@include adaptiv-value('height', 500, 300, 1); 
+        // 50vh 
+        // попробовать 100vh - (высота хедера + высота текста с кнопкой), но быть аккуратнее на телефонах с горизонтальной ориентацией
 		@include bg-cover;
 
 		@include mq(md) {

@@ -56,17 +56,17 @@
 
 	&__bg {
 		width: 100%;
-		@include adaptiv-value('height', 500, 300, 1); 
-        // 50vh 
-        // попробовать 100vh - (высота хедера + высота текста с кнопкой), но быть аккуратнее на телефонах с горизонтальной ориентацией
+        height: 61vh;
 		@include bg-cover;
 
-		@include mq(md) {
-			margin-bottom: 30px;
-		}
+        @include mq(lg) {
+            height: 48vh;
+            margin-bottom: 30px;
+        }
 
 		@include mq(sm) {
 			margin-bottom: 20px;
+            height: 38vh;
 		}
 	}
 }

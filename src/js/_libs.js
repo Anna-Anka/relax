@@ -1,5 +1,9 @@
+/* eslint-disable import/extensions */
+/* eslint-disable spaced-comment */
+/* eslint-disable import/no-relative-packages */
+
 // * Swiper
-//import '../../node_modules/swiper/swiper-bundle.min.js'
+//import '../../node_modules/swiper/swiper-bundle.min.js';
 
 // * fancybox
 //import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js'

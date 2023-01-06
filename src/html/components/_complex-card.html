@@ -1,0 +1,57 @@
+<article class="@class">
+    <div class="complex-card__about">
+        <h3 class="complex-card__title subtitle">
+            @title
+        </h3>
+        <div class="complex-card__text">
+            @text
+        </div>
+    </div>
+    <div class="complex-card__content">
+        <div class="complex-card__info">
+            <ul class="complex-card__characteristics">
+                @characteristics
+            </ul>
+            <div class="complex-card__bottom">
+                <div class="complex-card__numbers">
+                    <span class="complex-card__number complex-card__number--price">@price ₽</span>
+                    <span class="complex-card__number complex-card__number--people">@people человека</span>
+                </div>
+                <button class="complex-card__order button button--border" type="button">
+                    Забронировать
+                </button>
+            </div>
+        </div>
+        <div class="complex-card__swiper swiper">
+            <ul class="complex-card__items swiper-wrapper">
+                <li class="complex-card__item swiper-slide">
+                    <picture>
+                        <source srcset="img/complexes/@folder-img/1.avif" type="image/avif">
+                        <source srcset="img/complexes/@folder-img/1.webp" type="image/webp">
+                        <img class="complex-card__img" src="img/complexes/@folder-img/1.jpg" alt="Номер в коттедже" width="823" height="320" loading="lazy">
+                    </picture>
+                </li>
+                <li class="complex-card__item swiper-slide">
+                    <picture>
+                        <source srcset="img/complexes/@folder-img/2.avif" type="image/avif">
+                        <source srcset="img/complexes/@folder-img/2.webp" type="image/webp">
+                        <img class="complex-card__img" src="img/complexes/@folder-img/2.jpg" alt="Номер в коттедже" width="823" height="320" loading="lazy">
+                    </picture>
+                </li>
+                <li class="complex-card__item swiper-slide">
+                    <picture>
+                        <source srcset="img/complexes/@folder-img/3.avif" type="image/avif">
+                        <source srcset="img/complexes/@folder-img/3.webp" type="image/webp">
+                        <img class="complex-card__img" src="img/complexes/@folder-img/3.jpg" alt="Номер в коттедже" width="823" height="320" loading="lazy">
+                    </picture>
+                </li>
+            </ul>
+            <div class="complex-card__buttons">
+                <button class="complex-card__button complex-card__button--prev swiper-button-prev" type="button">
+                </button>
+                <button class="complex-card__button complex-card__button--next swiper-button-next" type="button">
+                </button>
+            </div>
+        </div>
+    </div>
+</article>

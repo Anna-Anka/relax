@@ -1,0 +1,232 @@
+.complex-card {
+	&--accent {
+		.complex-card__info {
+			right: unset;
+			@include adaptiv-value('left', 0, 130, 1);
+			color: $white;
+			background-color: $dark-800;
+			transform: translate(-50%, -50%);
+		}
+
+		.complex-card__about {
+			margin-left: auto;
+		}
+
+		.complex-card__numbers {
+			&--price {
+				&::before {
+					background-image: url('../img/icons/wallet-white.svg');
+				}
+			}
+
+			&--people {
+				&::before {
+					background-image: url('../img/icons/people-white.svg');
+				}
+			}
+		}
+	}
+
+	&__about {
+		width: 100%;
+		max-width: 590px;
+		@include adaptiv-value('margin-bottom', 30, 20, 1);
+	}
+
+	&__content {
+		position: relative;
+
+		@include mq(lg) {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 20, 15, 1);
+	}
+
+	&__text {
+		p {
+			&:not(:last-child) {
+				@include adaptiv-value('margin-bottom', 15, 10, 1);
+			}
+		}
+	}
+
+	&__swiper {
+		width: 100%;
+		max-width: 825px;
+		@include flex-column-v-center;
+	}
+
+	&__img {
+		width: 100%;
+		@include adaptiv-value('height', 320, 280, 1);
+		object-fit: cover;
+		border-radius: 10px;
+
+		@include mq(lg) {
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+
+	&__items {
+		margin-bottom: 20px;
+
+		@include mq(lg) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__info {
+		position: absolute;
+		top: 50%;
+		@include adaptiv-value('right', 0, 130, 1);
+		z-index: 5;
+		width: 100%;
+		max-width: 336px;
+		padding: 25px;
+		background-color: $grey-400;
+		border-radius: 10px;
+		transform: translate(50%, -50%);
+
+		@include mq(lg) {
+			position: relative;
+			right: 0;
+			bottom: 0;
+			max-width: 100%;
+			margin-top: -10px;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			transform: translate(0);
+		}
+	}
+
+	&__characteristics,
+	&__numbers {
+		@include adaptiv-value('margin-bottom', 20, 15, 1);
+	}
+
+	&__characteristics {
+		@include mq(lg) {
+			column-count: 3;
+		}
+	}
+
+	&__characteristic {
+		position: relative;
+		padding-left: 25px;
+
+		&::before {
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 10px;
+			height: 10px;
+			background-color: $yellow-600;
+			border-radius: 50%;
+			content: '';
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__numbers {
+		display: flex;
+		justify-content: space-between;
+		font-weight: $fw-600;
+
+        @include mq(lg) {
+            margin-bottom: 0;
+        }
+	}
+
+	&__price {
+		margin-right: 10px;
+	}
+
+	&__number {
+		position: relative;
+		display: inline-block;
+		padding-left: 40px;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 30px;
+			height: 30px;
+			content: '';
+			@include bg-conatin;
+		}
+
+		&--price {
+			&::before {
+				background-image: url('../img/icons/wallet.svg');
+			}
+		}
+
+		&--people {
+			&::before {
+				background-image: url('../img/icons/people.svg');
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+
+	&__bottom {
+		@include mq(lg) {
+			@include flex-center-sb;
+		}
+	}
+
+	&__order {
+		width: 100%;
+
+		@include mq(lg) {
+			width: auto;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+
+		@include mq(lg) {
+			display: none;
+		}
+	}
+
+	&__button {
+		position: relative;
+		top: 0;
+		width: 76px;
+		height: 22px;
+		margin-top: 0;
+		color: transparent;
+
+		&::after {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			font-size: 0;
+			background-image: url('../img/icons/arrow.svg');
+			content: '';
+			@include bg-conatin;
+		}
+
+		&--next {
+			transform: rotate(180deg);
+		}
+
+		&:not(:last-child) {
+			margin-right: 50px;
+		}
+	}
+}

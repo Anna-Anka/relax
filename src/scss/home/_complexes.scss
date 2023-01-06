@@ -1,0 +1,20 @@
+.complexes {
+	&__item {
+		width: 100%;
+		max-width: 825px;
+		margin-right: auto;
+
+		&:not(:last-child) {
+			@include adaptiv-value('margin-bottom', 90, 40, 1);
+		}
+
+		&--right {
+			margin-right: 0;
+			margin-left: auto;
+		}
+        
+        @include mq(lg) {
+            max-width: 100%;
+        }
+	}
+}

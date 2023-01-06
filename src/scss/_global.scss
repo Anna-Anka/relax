@@ -38,6 +38,11 @@ body {
 	font-weight: $fw-600;
 	background-color: $dark-800;
 	border-radius: 10px;
+
+    &--border {
+        background-color: transparent;
+        border: 2px solid $yellow-600;
+    }
 }
 
 .sr-only {

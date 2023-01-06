@@ -1,3 +1,7 @@
+/* eslint-disable import/extensions */
+/* eslint-disable spaced-comment */
+/* eslint-disable import/no-relative-packages */
+
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
@@ -5,7 +9,7 @@
 //import { stepperFunction } from "./functions/stepper";
 //stepperFunction()
 
-// * accordion 
+// * accordion
 //import { accordionFunction } from "./templates/accordion";
 //accordionFunction();
 
@@ -30,7 +34,8 @@
 
 // * Реализация бургер-меню
 import { burger } from './templates/burger';
-burger()
+
+burger();
 
 // * Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './templates/disable-scroll';
@@ -56,13 +61,6 @@ burger()
 // import { createPopper, right} from '@popperjs/core';
 // createPopper(el, tooltip, {
 //   placement: 'right'
-// });
-
-// * Подключение свайпера
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// Swiper.use([Navigation, Pagination]);
-// const swiper = new Swiper(el, {
-//   slidesPerView: 'auto',
 // });
 
 // * Подключение анимаций по скроллу
@@ -105,7 +103,7 @@ burger()
 //     const element = document.querySelector('.default');
 //     const choices = new Choices(element, {
 //         searchEnabled: false
-//     });   
+//     });
 // }
 
 // defaultSelect()

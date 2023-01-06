@@ -10,6 +10,7 @@
 
 // * components
 @import './components/header';
+@import './components/complex-card';
 @import './components/footer';
 
 // * templates
@@ -21,5 +22,6 @@
 // * home-page
 @import './home/hero';
 @import './home/benefits';
+@import './home/complexes';
 @import './home/conditions';
 @import './home/best';

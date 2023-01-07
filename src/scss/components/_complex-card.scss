@@ -6,13 +6,19 @@
 			color: $white;
 			background-color: $dark-800;
 			transform: translate(-50%, -50%);
+
+			@include mq(lg) {
+				top: unset;
+				left: unset;
+				transform: translate(0);
+			}
 		}
 
 		.complex-card__about {
 			margin-left: auto;
 		}
 
-		.complex-card__numbers {
+		.complex-card__number {
 			&--price {
 				&::before {
 					background-image: url('../img/icons/wallet-white.svg');
@@ -31,6 +37,10 @@
 		width: 100%;
 		max-width: 590px;
 		@include adaptiv-value('margin-bottom', 30, 20, 1);
+
+		@include mq(lg) {
+			max-width: 100%;
+		}
 	}
 
 	&__content {
@@ -58,6 +68,10 @@
 		width: 100%;
 		max-width: 825px;
 		@include flex-column-v-center;
+
+		@include mq(lg) {
+			max-width: 100%;
+		}
 	}
 
 	&__img {
@@ -70,6 +84,32 @@
 			border-bottom-right-radius: 0;
 			border-bottom-left-radius: 0;
 		}
+	}
+
+	.swiper-pagination {
+		bottom: 25px;
+		display: none;
+		justify-content: center;
+
+		@include mq(lg) {
+			display: flex;
+		}
+	}
+
+	.swiper-pagination-bullet {
+		width: 15px;
+		height: 15px;
+		background-color: $white;
+		opacity: 1;
+		transition: background-color 0.4s;
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: $yellow-600;
 	}
 
 	&__items {
@@ -111,7 +151,12 @@
 
 	&__characteristics {
 		@include mq(lg) {
-			column-count: 3;
+			gap: 15px;
+			column-count: 2;
+		}
+
+		@include mq(sm) {
+			column-count: 1;
 		}
 	}
 
@@ -121,7 +166,7 @@
 
 		&::before {
 			position: absolute;
-			top: 8px;
+			@include adaptiv-value('top', 8, 4, 1);
 			left: 0;
 			width: 10px;
 			height: 10px;
@@ -136,13 +181,18 @@
 	}
 
 	&__numbers {
-		display: flex;
-		justify-content: space-between;
+		@include flex-center-sb;
 		font-weight: $fw-600;
 
-        @include mq(lg) {
-            margin-bottom: 0;
-        }
+		@include mq(lg) {
+			margin-bottom: 0;
+		}
+
+		@include mq(sm) {
+			justify-content: space-between;
+			width: 100%;
+			margin-bottom: 15px;
+		}
 	}
 
 	&__price {
@@ -156,10 +206,11 @@
 
 		&::before {
 			position: absolute;
-			top: 0;
+			top: 50%;
 			left: 0;
 			width: 30px;
 			height: 30px;
+			transform: translateY(-50%);
 			content: '';
 			@include bg-conatin;
 		}
@@ -177,13 +228,26 @@
 		}
 
 		&:not(:last-child) {
-			margin-right: 30px;
+			margin-right: 10px;
+
+			@include mq(lg) {
+				margin-right: 30px;
+			}
+
+			@include mq(sm) {
+				margin-right: 10px;
+			}
 		}
 	}
 
 	&__bottom {
 		@include mq(lg) {
 			@include flex-center-sb;
+		}
+
+		@include mq(sm) {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 
@@ -192,6 +256,10 @@
 
 		@include mq(lg) {
 			width: auto;
+		}
+
+		@include mq(sm) {
+			width: 100%;
 		}
 	}
 

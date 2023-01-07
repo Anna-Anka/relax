@@ -1,7 +1,8 @@
 // * Подключение свайпера
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 Swiper.use([Navigation]);
+Swiper.use([Pagination]);
 
 const complexSwiper = () => {
     if (document.querySelector('.complex-card__swiper')) {
@@ -19,13 +20,10 @@ const complexSwiper = () => {
                     prevEl: card.querySelector('.swiper-button-prev'),
                 },
 
-                breakpoints: {
-                    992: {
-                        pagination: {
-                            el: '.swiper-pagination',
-                        },
-                    },
-                },
+                pagination: {
+                    el: card.querySelector('.swiper-pagination'),
+                    clickable: true,
+                }
             });
         });
     }

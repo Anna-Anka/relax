@@ -23,7 +23,7 @@ const complexSwiper = () => {
                 pagination: {
                     el: card.querySelector('.swiper-pagination'),
                     clickable: true,
-                }
+                },
             });
         });
     }

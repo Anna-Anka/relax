@@ -1,0 +1,51 @@
+.offer-card {
+	display: flex;
+	flex-direction: column;
+
+	&__title {
+		margin-bottom: 15px;
+	}
+
+	&__accent {
+		color: $yellow-600;
+	}
+
+	&__image {
+		position: relative;
+		padding-bottom: 47%;
+	}
+
+	&__img {
+		@include resize-img;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+
+	&__deadline {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 5;
+		padding: 14px 25px;
+		font-weight: $fw-700;
+		background-color: $yellow-600;
+		border-radius: 10px 10px 0 10px;
+	}
+
+	&--accent {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
+		.offer-card__image {
+			height: 100%;
+
+			@include mq(md) {
+				height: auto;
+				padding-bottom: 100%;
+			}
+		}
+	}
+}

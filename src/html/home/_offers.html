@@ -1,0 +1,35 @@
+<section class="offers section">
+    <div class="container">
+        <div class="offers__wrapper">
+            <div class="offers__small">
+                <h2 class="offers__title title">
+                    специальные предложения
+                </h2>
+                <div class="offers__item">
+                    @include('./../components/_offer-card.html', {
+                        'class' : 'offer-card',
+                        'title' : 'Отметь день рождения на базе Relax со <span class="offer-card__accent subtitle">скидкой  20%</span>',
+                        'img' : 'birthday'
+                    })
+                </div>
+                <div class="offers__item">
+                    @include('./../components/_offer-card.html', {
+                        'class' : 'offer-card',
+                        'title' : 'Неделя проживания со <span class="offer-card__accent subtitle">скидкой  30%</span>',
+                        'img' : 'accommodation'
+                    })
+                </div>
+            </div>
+            <div class="offers__big">
+                <div class="offers__item">
+                    @include('./../components/_offer-card.html', {
+                        'class' : 'offer-card offer-card--accent',
+                        'deadline' : 'До 20.12.2021',
+                        'title' : '<span class="offer-card__accent subtitle">бесплатная</span> конная прогулка по живописным местам',
+                        'img' : 'horse'
+                    })
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

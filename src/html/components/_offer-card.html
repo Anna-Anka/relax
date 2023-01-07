@@ -1,0 +1,15 @@
+<article class="@class">
+    <h3 class="offer-card__title">
+        @title 
+    </h3>
+    <div class="offer-card__image">
+        @if(context.class === 'offer-card offer-card--accent') {
+            <p class="offer-card__deadline">@deadline</p>
+        }
+        <picture>
+            <source srcset="img/offers/@img.avif" type="image/avif">
+            <source srcset="img/offers/@img.webp" type="image/webp">
+            <img class="offer-card__img" src="img/offers/@img.jpg" alt="День рождения на базе Relax" width="484" height="227" loading="lazy">
+        </picture>
+    </div>
+</article>

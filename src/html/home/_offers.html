@@ -6,15 +6,17 @@
                     специальные предложения
                 </h2>
                 <div class="offers__item">
-                    @include('./../components/_offer-card.html', {
+                    @include('./../components/cards/_offer-card.html', {
                         'class' : 'offer-card',
+                        'alt' : 'День рождения на базе Relax',
                         'title' : 'Отметь день рождения на базе Relax со <span class="offer-card__accent subtitle">скидкой  20%</span>',
                         'img' : 'birthday'
                     })
                 </div>
                 <div class="offers__item">
-                    @include('./../components/_offer-card.html', {
+                    @include('./../components/cards/_offer-card.html', {
                         'class' : 'offer-card',
+                        'alt' : 'Пикник базе Relax',
                         'title' : 'Неделя проживания со <span class="offer-card__accent subtitle">скидкой  30%</span>',
                         'img' : 'accommodation'
                     })
@@ -22,8 +24,9 @@
             </div>
             <div class="offers__big">
                 <div class="offers__item">
-                    @include('./../components/_offer-card.html', {
+                    @include('./../components/cards/_offer-card.html', {
                         'class' : 'offer-card offer-card--accent',
+                        'alt' : 'Прогулка на лошадях по базе Relax',
                         'deadline' : 'До 20.12.2021',
                         'title' : '<span class="offer-card__accent subtitle">бесплатная</span> конная прогулка по живописным местам',
                         'img' : 'horse'

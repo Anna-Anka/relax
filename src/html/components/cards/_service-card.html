@@ -1,0 +1,21 @@
+<article class="service-card">
+    <div class="@image-class">
+        <div class="service-card__info @info-class">
+            <h3 class="service-card__title subtitle">@title</h3>
+
+            @if(context.type === 'list') {
+                <ul class="service-card__items">@items</ul>
+            }
+
+            @if(context.type === 'normal') {
+                <div class="service-card__text">@text</div>
+            }
+
+        </div>
+        <picture>
+            <source srcset="img/services/@img.avif" type="image/avif">
+            <source srcset="img/services/@img.webp" type="image/webp">
+            <img class="service-card__img" src="img/services/@img.jpg" alt="@alt" width="485" height="630" loading="lazy">
+        </picture>
+    </div>
+</article>

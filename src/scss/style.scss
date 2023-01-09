@@ -10,9 +10,12 @@
 
 // * components
 @import './components/header';
-@import './components/complex-card';
-@import './components/offer-card';
 @import './components/footer';
+
+// * cards
+@import './components/cards/complex-card';
+@import './components/cards/offer-card';
+@import './components/cards/service-card';
 
 // * templates
 //@import './templates/stepper';
@@ -26,4 +29,5 @@
 @import './home/complexes';
 @import './home/conditions';
 @import './home/best';
+@import './home/services';
 @import './home/offers';

@@ -1,0 +1,41 @@
+<section class="services section">
+    <div class="container">
+        <h2 class="services__title title">
+            Дополнительные услуги
+        </h2>
+        <div class="services__content">
+            <div class="services__swiper swiper">
+                <div class="services__buttons">
+                    <button class="services__button services__button--prev swiper-button-prev" type="button">
+                    </button>
+                    <button class="services__button services__button--next swiper-button-next" type="button">
+                    </button>
+                </div>
+                <ul class="services__items swiper-wrapper">
+                    <li class="services__item swiper-slide">
+                        @include('./../components/cards/_service-card.html', {
+                        'image-class' : 'service-card__image',
+                        'info-class' : '',
+                        'title' : 'Конный клуб',
+                        'type' : 'list',
+                        'items' : '<li class="service-card__item">Фотосессии с лошадьми</li><li class="service-card__item">Прогулка по живописным местам</li><li class="service-card__item">Занятия для детей и  взрослых</li>',
+                        'img' : 'horse',
+                        'alt' : 'Занятие верхом на базе Relax',
+                    })
+                    </li>
+                    <li class="services__item swiper-slide">
+                        @include('./../components/cards/_service-card.html', {
+                        'image-class' : 'service-card__image service-card__image--big',
+                        'info-class' : 'service-card__info--dark service-card__info--text',
+                        'title' : 'Рыбалка',
+                        'type' : 'normal',
+                        'text' : '<p>Изобилие карпа, белого амура, щуки, судака уже много лет привлекают сюда любителей цивилизованной рыбной ловли.</p>',
+                        'img' : 'fish',
+                        'alt' : 'Рыбалка на базе Relax',
+                        })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -39,10 +39,10 @@ body {
 	background-color: $dark-800;
 	border-radius: 10px;
 
-    &--border {
-        background-color: transparent;
-        border: 2px solid $yellow-600;
-    }
+	&--border {
+		background-color: transparent;
+		border: 2px solid $yellow-600;
+	}
 }
 
 .sr-only {
@@ -105,5 +105,5 @@ body {
 }
 
 .swiper-slide {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }

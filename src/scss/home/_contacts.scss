@@ -1,0 +1,21 @@
+.contacts {
+    &__container {
+        padding-right: calc((100% - 1191px)/2);
+        display: flex;
+        align-items: center;
+    }
+
+    &__map {
+        height: 500px;
+        width: 100%;
+        background-color: $grey-400;
+    }
+
+    &__form {
+        border-radius: 10px;
+    }
+
+    &__title {
+        @include adaptiv-value('margin-bottom', 40, 30, 1);
+    }
+}

@@ -1,0 +1,27 @@
+<section class="contacts section">
+    <div class="contacts__container">
+        <div class="contacts__map"></div>
+        <form class="contacts__form form" action="#">
+            <h2 class="form__title title">
+                Онлайн-бронирование
+            </h2>
+            <div class="form__items">
+                <div class="form__item">
+                    <label class="sr-only" for="contacts-name">Введите ваше имя</label>
+                    <input class="form__field" name="name" type="text" placeholder="Представьтесь, пожалуйста" id="contacts-name" required>
+                </div>
+                <div class="form__item">
+                    <label class="sr-only" for="contatcs-phone">Введите номер телефона</label>
+                    <input class="form__field" name="phone" type="tel" placeholder="Номер телефона" id="contatcs-phone" required>
+                </div>
+                <div class="form__item form__item--message">
+                    <label class="sr-only" for="contacts-message">Введите сообщение</label>
+                    <textarea class="form__field form__field--message" id="contacts-message" placeholder="Ваш вопрос или предложение" name="message"></textarea>
+                </div>
+            </div>
+            <button class="form__button button" type="submit">
+                Забронировать
+            </button>
+        </form>
+    </div>
+</section>

@@ -103,3 +103,7 @@ body {
 	@include adaptiv-value('padding-top', 60, 30, 1);
 	@include adaptiv-value('padding-bottom', 60, 30, 1);
 }
+
+.swiper-slide {
+    box-sizing: border-box;
+}

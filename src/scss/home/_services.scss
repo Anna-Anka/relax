@@ -5,6 +5,7 @@
 
 		@include mq(lg) {
 			max-width: 100%;
+            margin-bottom: 60px;
 		}
 	}
 
@@ -18,7 +19,7 @@
 
     &__item {
         &:nth-child(odd) {
-            z-index: 5;
+           z-index: 5;
         }
     }
 
@@ -27,6 +28,12 @@
 		top: -80px;
 		right: 0;
 		display: flex;
+
+        @include mq(lg) {
+            top: -50px;
+            right: unset;
+            left: 0;
+        }
 	}
 
 	&__button {

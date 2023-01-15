@@ -8,8 +8,6 @@ const serviceSwiper = () => {
     if (document.querySelector('.services__swiper')) {
         const serviceSwiper = new Swiper('.services__swiper', {
             loop: true,
-            slidesPerView: 2,
-            slidesPerGroup: 2,
             spaceBetween: 10,
 
             navigation: {
@@ -20,6 +18,18 @@ const serviceSwiper = () => {
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+            },
+
+            breakpoints: {
+                767: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                },
+
+                320: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                },
             },
         });
     }

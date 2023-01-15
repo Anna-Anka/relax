@@ -3,11 +3,23 @@
 		position: relative;
 		width: 100%;
 		max-width: 485px;
-		height: 400px;
 
 		&--big {
-			height: 630px;
-            margin-left: auto;
+			margin-left: auto;
+
+			.service-card__picture {
+				padding-bottom: 130%;
+
+                @include mq(md) {
+                    padding-bottom: 90%;
+                }
+			}
+		}
+
+		@include mq(lg) {
+			display: flex;
+			flex-direction: column-reverse;
+			max-width: 100%;
 		}
 	}
 
@@ -35,6 +47,16 @@
 			bottom: 0;
 			left: -290px;
 			max-width: 400px;
+		}
+
+		@include mq(lg) {
+			position: relative;
+			top: unset;
+			right: unset;
+			bottom: unset;
+			left: unset;
+			max-width: 100%;
+			border-radius: 0 0 10px 10px;
 		}
 	}
 
@@ -70,10 +92,26 @@
 		}
 	}
 
+	&__picture {
+		position: relative;
+		padding-bottom: 83%;
+
+        @include mq(md) {
+            padding-bottom: 70%;
+        }
+	}
+
 	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		border-radius: 10px;
+
+		@include mq(lg) {
+			border-radius: 10px 10px 0 0;
+		}
 	}
 }

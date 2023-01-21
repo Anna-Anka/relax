@@ -67,6 +67,7 @@
 		"@popperjs/core": "^2.11.6",
 		"aos": "^2.3.4",
 		"choices.js": "^10.1.0",
+		"eslint-config-standard": "^17.0.0",
 		"gh-pages": "^4.0.0",
 		"graph-modal": "^1.0.6",
 		"graph-tabs": "^1.0.2",

@@ -4,9 +4,9 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation]);
 Swiper.use([Pagination]);
 
-const serviceSwiper = () => {
+export const serviceSwiper = () => {
     if (document.querySelector('.services__swiper')) {
-        const serviceSwiper = new Swiper('.services__swiper', {
+        return new Swiper('.services__swiper', {
             loop: true,
             spaceBetween: 10,
 
@@ -34,5 +34,3 @@ const serviceSwiper = () => {
         });
     }
 };
-
-export default serviceSwiper;

@@ -153,3 +153,8 @@ burger();
 // * Подключение плавного скролла
 // import { smoothScroll } from "./templates/smooth-scroll";
 // smoothScroll()
+
+// * Подключение карты
+import { mapFunction } from './templates/map';
+
+mapFunction();

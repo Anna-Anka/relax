@@ -1,0 +1,33 @@
+<div class="graph-modal">
+   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal">
+       <div class="graph-modal__box">
+           <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+           <div class="graph-modal__content">
+                <div class="graph-modal__bg" style="background-image: url('img/modal-bg.jpg');">
+                mkf</div>
+                <form class="graph-modal__form form" action="#">
+                    <h2 class="form__title title">
+                        Онлайн-бронирование
+                    </h2>
+                    <div class="form__items">
+                        <div class="form__item">
+                            <label class="sr-only" for="modal-name">Введите ваше имя</label>
+                            <input class="form__field" name="name" type="text" placeholder="Представьтесь, пожалуйста" id="modal-name" required>
+                        </div>
+                        <div class="form__item">
+                            <label class="sr-only" for="modal-phone">Введите номер телефона</label>
+                            <input class="form__field" name="phone" type="tel" placeholder="Номер телефона" id="modal-phone" required>
+                        </div>
+                        <div class="form__item form__item--message">
+                            <label class="sr-only" for="modal-message">Введите сообщение</label>
+                            <textarea class="form__field form__field--message" id="modal-message" placeholder="Ваш вопрос или предложение" name="message"></textarea>
+                        </div>
+                    </div>
+                    <button class="form__button button" type="submit">
+                        Забронировать
+                    </button>
+                </form>
+           </div>
+       </div>
+   </div>
+</div>

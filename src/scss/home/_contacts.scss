@@ -1,4 +1,9 @@
 .contacts {
+
+    @include mq(lg) {
+        padding-bottom: 0;
+    }
+
 	&__container {
 		padding-right: calc((100% - 1241px) / 2);
 	}

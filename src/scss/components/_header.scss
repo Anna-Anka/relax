@@ -1,8 +1,17 @@
 .header {
+	z-index: 50;
 	color: $white;
 	background-color: $dark-800;
 	@include adaptiv-value('padding-top', 10, 7, 1);
 	@include adaptiv-value('padding-bottom', 10, 7, 1);
+
+	&--fixed {
+		position: fixed;
+		right: 0;
+		left: 0;
+		animation-name: header-fixed;
+		animation-duration: 0.4s;
+	}
 
 	&__navigation {
 		@include flex-all-center;
@@ -111,39 +120,35 @@
 
 	&__link {
 		position: relative;
-        display: flex;
+		display: flex;
 		transition: transform 0.4s, opacity 0.4s;
 
-        &::before,
-        &::after {
-            position: absolute;
-            background-color: $white;
-            content: '';
-            left: 0;
+		&::before,
+		&::after {
+			position: absolute;
+			left: 0;
 			width: 100%;
 			height: 2px;
-            transform: scaleX(0);
-            transition: transform 0.4s;
-        }
+			background-color: $white;
+			transform: scaleX(0);
+			transition: transform 0.4s;
+			content: '';
+		}
 
 		&::before {
 			bottom: -2px;
-			
 		}
 
-        &::after {
-            top: -2px;
-        }
+		&::after {
+			top: -2px;
+		}
 
-
-        &:focus {
-            outline: 0;
-            
-            &::after,
-            &::before {
-			    transform: scaleX(1);
-            }
-        }
+		&:focus {
+			&::after,
+			&::before {
+				transform: scaleX(1);
+			}
+		}
 
 		&:hover {
 			&::before {
@@ -153,7 +158,7 @@
 
 		&:active {
 			transform: scale(0.9);
-            opacity: 0.8;
+			opacity: 0.8;
 		}
 	}
 }
@@ -161,4 +166,14 @@
 .burger {
 	@include burger;
 	z-index: 10;
+}
+
+@keyframes header-fixed {
+	from {
+		top: -100%;
+	}
+
+	to {
+		top: 0;
+	}
 }

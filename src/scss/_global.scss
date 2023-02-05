@@ -76,7 +76,8 @@ body {
 .logo {
 	display: inline-block;
 	width: 100%;
-    transition: opacity 0.4s, transform 0.4s;
+	border-radius: 4px;
+	transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s;
 	@include adaptiv-value('max-width', 46, 32, 1);
 	@include adaptiv-value('max-height', 74, 52, 1);
 
@@ -86,8 +87,17 @@ body {
 		object-fit: contain;
 	}
 
+	&:focus {
+		box-shadow: 0 0 0 2px $white;
+        transform: scale(0.7);
+	}
+
+	&:hover {
+		transform: rotate(-90deg) scale(0.7);
+	}
+
 	&:active {
-		transform: scale(0.9);
+		transform: scale(0.5);
 		opacity: 0.8;
 	}
 }

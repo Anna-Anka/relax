@@ -73,8 +73,9 @@ const modal = new GraphModal('modal');
 // const rellax = new Rellax('.rellax');
 
 // * Подключение плавной прокрутки к якорям
-// import SmoothScroll from 'smooth-scroll';
-// const scroll = new SmoothScroll('a[href*="#"]');
+//import SmoothScroll from 'smooth-scroll';
+
+//const scroll = new SmoothScroll('a[href*="#"]');
 
 // * Подключение галереи (Fullscreen Lightbox)
 //import 'fslightbox'
@@ -148,12 +149,14 @@ const modal = new GraphModal('modal');
 //handleMarquee();
 
 // * Подключение липкой шапки
-// import { headerSticky } from "./templates/header-sticky";
-// headerSticky()
+import { headerSticky } from "./templates/header-sticky";
+
+headerSticky();
 
 // * Подключение плавного скролла
-// import { smoothScroll } from "./templates/smooth-scroll";
-// smoothScroll()
+import { smoothScroll } from "./templates/smooth-scroll";
+
+smoothScroll();
 
 // * Подключение карты
 import { mapFunction } from './templates/map';

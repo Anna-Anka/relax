@@ -72,11 +72,6 @@ const modal = new GraphModal('modal');
 // import Rellax from 'rellax';
 // const rellax = new Rellax('.rellax');
 
-// * Подключение плавной прокрутки к якорям
-//import SmoothScroll from 'smooth-scroll';
-
-//const scroll = new SmoothScroll('a[href*="#"]');
-
 // * Подключение галереи (Fullscreen Lightbox)
 //import 'fslightbox'
 
@@ -162,3 +157,8 @@ smoothScroll();
 import { mapFunction } from './templates/map';
 
 mapFunction();
+
+// * Подключение паралакса
+import { parallax } from './templates/parallax';
+
+parallax();

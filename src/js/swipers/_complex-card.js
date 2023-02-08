@@ -14,7 +14,11 @@ const complexSwiper = () => {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
                 spaceBetween: 10,
-
+                speed: 800,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
                 navigation: {
                     nextEl: card.querySelector('.swiper-button-next'),
                     prevEl: card.querySelector('.swiper-button-prev'),

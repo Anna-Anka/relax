@@ -1,14 +1,17 @@
 .header {
+	position: absolute;
+	right: 0;
+	left: 0;
 	z-index: 50;
 	color: $white;
 	background-color: $dark-800;
+	transition: top 0.4s;
 	@include adaptiv-value('padding-top', 10, 7, 1);
 	@include adaptiv-value('padding-bottom', 10, 7, 1);
 
 	&--fixed {
 		position: fixed;
-		right: 0;
-		left: 0;
+		top: 0;
 		animation-name: header-fixed;
 		animation-duration: 0.4s;
 	}

@@ -162,3 +162,8 @@ mapFunction();
 import { parallax } from './templates/parallax';
 
 parallax();
+
+// * Подключение печатающегося текста
+import { type } from './templates/type';
+
+type();

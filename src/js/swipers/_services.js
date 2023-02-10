@@ -7,8 +7,13 @@ Swiper.use([Pagination]);
 export const serviceSwiper = () => {
     if (document.querySelector('.services__swiper')) {
         return new Swiper('.services__swiper', {
-            loop: true,
             spaceBetween: 10,
+
+            speed: 800,
+            effect: 'cards',
+            fadeEffect: {
+                crossFade: true,
+            },
 
             navigation: {
                 nextEl: '.services__button--next',

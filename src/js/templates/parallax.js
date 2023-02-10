@@ -1,7 +1,8 @@
 export const parallax = () => {
     const bg = document.querySelector('.best__bg');
 
-    document.onmousemove = (e) => {
+    // По умолчанию здесь onmousemove повешен на document
+    bg.onmousemove = (e) => {
         const x = e.clientX / window.innerWidth;
         const y = e.clientY / window.innerWidth;
 

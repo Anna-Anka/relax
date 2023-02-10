@@ -10,12 +10,11 @@ const complexSwiper = () => {
         allCards.forEach((card) => {
             // eslint-disable-next-line no-unused-vars, no-new
             new Swiper(card, {
-                loop: true,
                 slidesPerView: 1,
                 slidesPerGroup: 1,
                 spaceBetween: 10,
                 speed: 800,
-                effect: 'fade',
+                effect: 'cards',
                 fadeEffect: {
                     crossFade: true,
                 },

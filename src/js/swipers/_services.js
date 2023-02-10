@@ -1,4 +1,3 @@
-// * Подключение свайпера
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 Swiper.use([Navigation]);
@@ -7,7 +6,7 @@ Swiper.use([Pagination]);
 export const serviceSwiper = () => {
     if (document.querySelector('.services__swiper')) {
         return new Swiper('.services__swiper', {
-            spaceBetween: 10,
+            watchOverflow: true,
 
             speed: 800,
             effect: 'cards',
@@ -27,7 +26,7 @@ export const serviceSwiper = () => {
 
             breakpoints: {
                 767: {
-                    slidesPerView: 2,
+                    slidesPerView: 'auto',
                     slidesPerGroup: 2,
                 },
 

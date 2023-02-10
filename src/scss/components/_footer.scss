@@ -110,4 +110,8 @@
             margin-bottom: 10px;
 		}
 	}
+
+    &__link {
+        @include link;
+    }
 }

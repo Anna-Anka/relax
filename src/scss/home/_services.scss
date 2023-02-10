@@ -18,8 +18,20 @@
 	}
 
     &__item {
+        width: 100%;
+        max-width: 50%;
+        padding-right: 10px;
+
         &:nth-child(odd) {
            z-index: 5;
+        }
+
+        &--width {
+            max-width: 100%;
+        }
+
+        @include mq(md) {
+            max-width: unset;
         }
     }
 

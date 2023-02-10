@@ -1,0 +1,48 @@
+@mixin swiper-button {
+	position: relative;
+	top: 0;
+	width: 36px;
+	height: 22px;
+	margin-top: 0;
+	color: transparent;
+	border-radius: 8px;
+	transition: width 0.6s, transform 0.4s, opacity 0.4s, box-shadow 0.4s;
+
+	&::after {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		font-size: 0;
+		background-image: url('../img/icons/arrow.svg');
+		background-repeat: no-repeat;
+		background-position: left;
+		background-size: cover;
+		content: '';
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 2px $yellow-600;
+		transform: scale(0.7);
+	}
+
+	&:hover {
+		width: 74px;
+	}
+
+	&:active {
+		transform: scale(0.7);
+		opacity: 0.8;
+	}
+
+	&--next {
+		transform: rotate(180deg);
+
+		&:active {
+			transform: rotate(180deg) scale(0.8);
+		}
+	}
+
+	&:not(:last-child) {
+		margin-right: 50px;
+	}
+}

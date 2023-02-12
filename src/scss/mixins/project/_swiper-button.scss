@@ -37,6 +37,7 @@
 	&--next {
 		transform: rotate(180deg);
 
+        &:focus,
 		&:active {
 			transform: rotate(180deg) scale(0.8);
 		}

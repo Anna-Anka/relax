@@ -74,9 +74,20 @@
 		}
 	}
 
+    &__link {
+        display: block;
+        @include adaptiv-value('height', 320, 280, 1);
+
+        &:hover {
+            .complex-card__img {
+                //transform: scale(1.1);
+            }
+        }
+    }
+
 	&__img {
 		width: 100%;
-		@include adaptiv-value('height', 320, 280, 1);
+        height: 100%;
 		object-fit: cover;
 		border-radius: 10px;
 

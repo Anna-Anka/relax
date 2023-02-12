@@ -73,7 +73,7 @@ const modal = new GraphModal('modal');
 // const rellax = new Rellax('.rellax');
 
 // * Подключение галереи (Fullscreen Lightbox)
-//import 'fslightbox'
+import 'fslightbox'
 
 // * Подключение mixit up
 //import mixitup from 'mixitup';

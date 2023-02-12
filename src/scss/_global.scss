@@ -30,19 +30,56 @@ body {
 }
 
 .button {
+	position: relative;
+	z-index: 1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 15px 45px;
+	overflow: hidden;
 	color: $yellow-600;
 	font-weight: $fw-600;
 	background-color: $dark-800;
 	border-radius: 10px;
-	transition: transform 0.4s;
+	transition: transform 0.4s ease-out, color 0.4s ease-out;
+
+    &::before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		background-color: $yellow-600;
+		transform: scaleX(0);
+		transition: transform 0.4s ease-out;
+		content: '';
+	}
 
 	&--border {
 		background-color: transparent;
-		border: 2px solid $yellow-600;
+        box-shadow: 0 0 0 2px $yellow-600;
+
+		&:hover {
+			color: $dark-800;
+		}
+	}
+
+    &--yellow {
+        color: $dark-800;
+		background-color: $yellow-600;
+
+        &::before {
+            background-color: $white;
+        }
+    }
+
+	&:hover {
+		color: $dark-800;
+
+		&::before {
+			transform: scaleX(1);
+		}
 	}
 
 	&:active {
@@ -89,7 +126,7 @@ body {
 
 	&:focus {
 		box-shadow: 0 0 0 2px $white;
-        transform: scale(0.7);
+		transform: scale(0.7);
 	}
 
 	&:hover {
